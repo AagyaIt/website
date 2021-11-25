@@ -1,5 +1,4 @@
 import './App.css';
-import NavBar from './NavBar'
 import { Container, createTheme, ThemeProvider } from '@mui/material';
 import {grey, purple} from '@mui/material/colors'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -35,7 +34,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <Container maxWidth="lg">
         <BrowserRouter>
-          <NavBar />
           <Switch>    
             <Route exact path='/' component={Home} />
             <Route path="/story" component={Story} />

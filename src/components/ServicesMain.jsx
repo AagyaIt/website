@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
-import { Grid, Card, Link, Typography, CardActionArea, CardContent, Button } from '@mui/material';
+import { Grid, Card, Typography, CardActionArea, CardContent, Button} from '@mui/material';
 import BusinessTwoToneIcon from '@mui/icons-material/BusinessTwoTone';
 import WorkTwoToneIcon from '@mui/icons-material/WorkTwoTone';
 import { SchoolTwoTone } from '@mui/icons-material';
+import { Link } from 'react-router-dom'
 
 class ServicesMain extends Component {
     render() {
         return (
-            <Grid container spacing={2}>
-                <Grid item xs={4}> {/*outsourcing*/}
+            <Grid container spacing={2} columns={{xs:4, sm:4, md:12}}>
+                <Grid item xs={12} sm={4} md={4}> {/*outsourcing*/}
                     <Card align='center' variant="outlined">
-                            <CardContent>
+                        <CardContent>
                             <CardActionArea>
-                            <BusinessTwoToneIcon color="secondary" sx={{fontSize:100}} />
+                                <BusinessTwoToneIcon color="secondary" sx={{fontSize:100}} />
                                 <Typography variant="h6" color="secondary">Software Consultancy</Typography>
                                 <Typography paragraph align="justify">
                                     We have a team of Rockstar software professionals with hands-on experience in a multitude of technologies. Our resources are ready to be deployed immediately so you can setup your technological infrastructure at lightning speed.
                                 </Typography>
-                                </CardActionArea>
-                            </CardContent>
-                        <Button color="secondary" component={Link} to="/Contact">
+                            </CardActionArea>
+                        </CardContent>
+                        <Button color="secondary" component={Link} to="/Services">
                                 Know more
                         </Button>
                     </Card>
                 </Grid>
-                <Grid item xs={4}> {/*Talent Acquisition*/}
+                <Grid item xs={12} sm={4} md={4}> {/*Talent Acquisition*/}
                     <Card align='center' variant="outlined">
                         <CardContent>
                             <CardActionArea>
@@ -35,12 +36,12 @@ class ServicesMain extends Component {
                                 </Typography>
                             </CardActionArea>
                         </CardContent>
-                        <Button color="secondary">
+                        <Button color="secondary" component={Link} to="/Services">
                             See Plans
                         </Button>
                     </Card>
                 </Grid>
-                <Grid item xs={4}> {/*training*/}
+                <Grid item xs={12} sm={4} md={4}> {/*training*/}
                     <Card align='center' variant="outlined">
                         <CardContent>
                             <CardActionArea>
@@ -51,7 +52,7 @@ class ServicesMain extends Component {
                                 </Typography>
                             </CardActionArea>
                         </CardContent>
-                        <Button color="secondary">
+                        <Button color="secondary" component={Link} to="/Services">
                             Lookup Classes
                         </Button>
                     </Card>

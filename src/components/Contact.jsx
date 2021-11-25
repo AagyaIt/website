@@ -1,5 +1,6 @@
 import { Checkbox, FormControlLabel, FormGroup, Button, Grid, TextField, Typography } from '@mui/material';
 import React, { Component } from 'react';
+import NavBar from '../NavBar';
 import Footer from './Footer';
 
 class Contact extends Component {
@@ -7,6 +8,9 @@ class Contact extends Component {
         return (
             <div>
                 <Grid container alignItems="center" justifyContent="center" spacing={2}>
+                    <Grid item xs={12}>
+                        <NavBar />
+                    </Grid>
                     <Grid item xs={12}>
                         <Typography variant="h2" align="center">Contact Us</Typography>
                     </Grid>

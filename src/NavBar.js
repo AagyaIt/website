@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.css'
-import {IconButton, AppBar, Typography, Toolbar, useMediaQuery, Menu, Button } from '@mui/material';
+import {IconButton, AppBar, Typography, Toolbar, useMediaQuery, Menu, Button, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu'
 import { MenuItem } from '@mui/material';
 import { Slide, useScrollTrigger } from '@mui/material';
@@ -36,7 +36,7 @@ function NavBar (props) {
         <HideOnScroll{...props}>
         <AppBar style={styles.customizeAppbar} position="relative">
         <Toolbar>
-        {isMobile ? (<>
+        {isMobile ? (
             <div>
                 <IconButton size="large" edge="start" color="primary" onClick={handleMenu}>
                     <MenuIcon />
@@ -49,29 +49,34 @@ function NavBar (props) {
                     transformOrigin={{ vertical: "top" ,horizontal: "right"}}
                     open={open}
                     >
+                    <Typography align='center' variant='h5' color="secondary">
+                        {'{(0)}'}
+                    </Typography>
                     <MenuItem onClick={()=>setAnchor(null)}>
-                        <Typography variant="h6">Home</Typography>
+                        <Button color="secondary" component={Link} to="/">Home</Button>
                     </MenuItem>
+                    <Divider />
                     <MenuItem onClick={()=>setAnchor(null)}>
-                        <Typography variant="h6">Our Story</Typography>
+                        <Button color="secondary" component={Link} to="/Story">Our Story</Button>
                     </MenuItem>
+                    <Divider />
                     <MenuItem onClick={()=>setAnchor(null)}>
-                        <Typography variant="h6">Services</Typography>
+                        <Button color="secondary" component={Link} to="/Services">Services</Button>
                     </MenuItem>
+                    <Divider />
                     <MenuItem onClick={()=>(setAnchor(null))}>
-                        <Typography variant="h6">Contact Us</Typography>
+                        <Button color="secondary" component={Link} to="/Contact">Contact us</Button>
                     </MenuItem>
                 </Menu>
                 </div>
-
-            </>) : (<div>
-                        <Button component={Link} to = "/">home</Button>
-                        <Button component={Link} to = "/Story">Our Story</Button>
-                        <Button component={Link} to = "/Services">Services</Button>
-                        <Button component={Link} to = "/Contact">Contact Us</Button>
-                        
-                    </div>)
-            
+                ) : (    
+                        <div>
+                            <Button component={Link} to = "/">home</Button>
+                            <Button component={Link} to = "/Story">Our Story</Button>
+                            <Button component={Link} to = "/Services">Services</Button>
+                            <Button component={Link} to = "/Contact">Contact Us</Button>
+                        </div>
+                    )
             }
             
             {/* Growing Div     */}

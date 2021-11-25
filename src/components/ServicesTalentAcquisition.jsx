@@ -1,5 +1,6 @@
 import { Typography , Grid, Card, Divider, CardActionArea, List, ListItem, Button} from '@mui/material';
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class ServicesTalentAcquisition extends Component {
     render() {
@@ -102,7 +103,7 @@ class ServicesTalentAcquisition extends Component {
                 <Grid item xs={12}>
                     <Grid container justifyContent="center" alignItems="center" spacing={2}>
                         <Grid item>
-                            <Button color="secondary" variant="outlined">Subscribe</Button>
+                            <Button color="secondary" variant="outlined" component={Link} to="/Contact">Subscribe</Button>
                         </Grid>
                     </Grid>
                 </Grid>

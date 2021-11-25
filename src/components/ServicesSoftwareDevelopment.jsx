@@ -4,6 +4,7 @@ import onsite from "../res/onsite.png"
 import remote from "../res/remote.png"
 import corp from "../res/c2c.png"
 import SeperatorLine from './SeperatorLine';
+import {Link} from 'react-router-dom'
 
 class ServicesSoftwareDevelopment extends Component {
     render() {
@@ -66,7 +67,7 @@ class ServicesSoftwareDevelopment extends Component {
             <Grid item xs={12}>
                 <Grid container justifyContent="center" alignItems="center" spacing={2}>
                     <Grid item>
-                        <Button color="secondary" variant="outlined">Submit your requirements</Button>
+                        <Button color="secondary" variant="outlined" component={Link} to="/Contact">Submit your requirements</Button>
                     </Grid>
                 </Grid>
             </Grid>

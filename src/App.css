@@ -1,4 +1,7 @@
-.middle-page {
-    display: flex;
-    flex-direction: row;
+body {
+    background-color: rgb(80,4,132, .05);
+}
+
+.MuiContainer-root {
+    background-color: white;
 }

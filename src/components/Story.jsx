@@ -2,11 +2,15 @@ import { Grid, Link, Typography } from '@mui/material';
 import React, { Component } from 'react';
 import Footer from './Footer';
 import SeperatorLine from './SeperatorLine';
+import NavBar from '../NavBar';
 
 class Story extends Component {
     render() {
         return (
                 <Grid container spacing={5}>
+                <Grid item xs={12}>
+                    <NavBar />
+                </Grid>
                 <Grid item xs={12}>
                 </Grid>
                 <Grid item xs={4}>

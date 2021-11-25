@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Typography, Paper, Grid, Button } from '@mui/material';
-import SeperatorLine from './SeperatorLine';
 class Footer extends Component {
     render() {
         return (
