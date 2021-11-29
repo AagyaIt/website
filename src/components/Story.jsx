@@ -1,7 +1,6 @@
-import { Grid, Link, Typography } from '@mui/material';
+import {Divider, Grid, Link, Typography } from '@mui/material';
 import React, { Component } from 'react';
 import Footer from './Footer';
-import SeperatorLine from './SeperatorLine';
 import NavBar from '../NavBar';
 
 class Story extends Component {
@@ -12,23 +11,10 @@ class Story extends Component {
                     <NavBar />
                 </Grid>
                 <Grid item xs={12}>
-                </Grid>
-                <Grid item xs={4}>
-                <SeperatorLine />
-                <SeperatorLine />
-                <SeperatorLine />
-                <SeperatorLine />
-                <SeperatorLine />
-                <SeperatorLine />
-                <SeperatorLine />
-                <SeperatorLine />
-                </Grid>
-                <Grid item xs={8}>
-                <Grid container spacing={2}>
+                <Grid container spacing={4}>
                     <Grid item xs={12}>
-                        <Typography align="center" variant="h2" color="secondary">
-                            {`{(0)}`}
-                        </Typography>
+                    </Grid>
+                    <Grid item xs={12}>                   
                     </Grid>
                     <Grid item xs={12}>
                         <Typography display="inline" variant="h6" align="justify">Established in 2020 </Typography>
@@ -79,6 +65,11 @@ class Story extends Component {
                 </Grid>
                 </Grid>
                 <Grid item xs={12}>
+                </Grid>
+                <Grid item xs={12}>
+                </Grid>
+                <Grid item xs={12}>
+                        <Divider />
                         <Footer />
                     </Grid>
                 </Grid>

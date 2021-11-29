@@ -1,4 +1,4 @@
-import { Checkbox, FormControlLabel, FormGroup, Button, Grid, TextField, Typography } from '@mui/material';
+import { Checkbox, FormControlLabel, FormGroup, Button, Grid, TextField, Typography, Paper, Divider} from '@mui/material';
 import React, { Component } from 'react';
 import NavBar from '../NavBar';
 import Footer from './Footer';
@@ -7,9 +7,17 @@ class Contact extends Component {
     render() {
         return (
             <div>
+                <NavBar />
                 <Grid container alignItems="center" justifyContent="center" spacing={2}>
                     <Grid item xs={12}>
-                        <NavBar />
+                    </Grid>
+                    <Grid item xs={12}>
+                    </Grid>
+                    <Grid item xs={12}>
+                    </Grid>
+                    <Grid item xs={12}>
+                    </Grid>
+                    <Grid item xs={12}>
                     </Grid>
                     <Grid item xs={12}>
                         <Typography variant="h2" align="center">Contact Us</Typography>
@@ -58,9 +66,10 @@ class Contact extends Component {
                             height="525px" 
                             style={{border:2}} 
                             allowfullscreen="true" 
-                            loading="lazy"></iframe>
+                            ></iframe>
                     </Grid> {/*Map*/}
                 </Grid>
+                <Divider />
                 <Footer />
             </div>
         );
@@ -68,3 +77,37 @@ class Contact extends Component {
 }
 
 export default Contact;
+
+export class ContactInfo extends Component {
+    render() {
+        return (
+            <Grid container>
+                <Grid item xs={12}>
+                    <Typography variant='subtitle2' component='div'>Address</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                    <Typography variant='subtitle2' color="secondary">Aagya IT Services</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                    <Typography variant='caption' color="secondary">First Floor. Plot No. 11</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                    <Typography variant='caption' color="secondary">TIT Colony, Neemuch</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                    <Typography variant='caption' color="secondary">Madhya Pradesh, India, 458441</Typography>
+                </Grid>
+                <Grid item xs={12}>
+                    <Paper elevation={0} sx={{display: {xs:'none', sm: 'block'}}} >
+                        <Typography variant='caption' color="secondary">Email: vkilewala@aagya.co.in</Typography>
+                    </Paper>
+                </Grid>
+                <Grid item xs={12}>
+                    <Paper elevation={0} sx={{display: {xs:'none', sm: 'block'}}} >
+                        <Typography variant='caption' component='div' color="secondary">Phone: +91 8815298475</Typography>
+                    </Paper>
+                </Grid>
+            </Grid>
+        );
+    }
+}
